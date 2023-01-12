@@ -1,0 +1,35 @@
+.toolbar{
+  background: var(--bg-toolbar);
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-adm, .navbar{
+  display: flex;
+  align-items: center;
+}
+
+.lock-icon{
+  transform: scale(0.6);
+}
+
+.mdc-button {
+  font-size: 1.3rem;
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bg-footer);
+  width: 100%;
+  padding: .5rem 0;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+
