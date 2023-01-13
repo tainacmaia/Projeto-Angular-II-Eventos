@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import { FooterComponent } from './components/footer/footer.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 const material = [
   MatToolbarModule,
@@ -16,7 +18,9 @@ const material = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+.toolbar{
+  background: var(--bg-toolbar);
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-adm, .navbar{
+  display: flex;
+  align-items: center;
+}
+
+.lock-icon{
+  transform: scale(0.6);
+}
+
+.mdc-button {
+  font-size: 1.3rem;
+}
