@@ -5,7 +5,9 @@ CREATE TABLE events(
     date DATETIME NOT NULL,
     local VARCHAR(255) NOT NULL,
     price INTEGER NOT NULL,
-    address VARCHAR(255) NOT NULL
+    address VARCHAR(255) NOT NULL,
+    createdAt DATETIME,
+    updatedAt DATETIME
 )
 
 SELECT * FROM events;
