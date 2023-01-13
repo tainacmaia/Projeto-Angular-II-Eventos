@@ -9,6 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
 
 const material = [
   MatToolbarModule,
@@ -20,7 +21,8 @@ const material = [
     AppComponent,
     HomeComponent,
     FooterComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    HomeAdmComponent
   ],
   imports: [
     BrowserModule,
