@@ -14,6 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { OptionsAdmComponent } from './admin/components/options-adm/options-adm.component';
 import { CreateEventComponent } from './admin/components/create-event/create-event.component';
 import { ListEventsComponent } from './admin/components/list-events/list-events.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const material = [
@@ -36,6 +37,7 @@ const material = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     material
   ],
   providers: [],
