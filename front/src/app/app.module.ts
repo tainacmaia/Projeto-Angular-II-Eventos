@@ -15,6 +15,8 @@ import { OptionsAdmComponent } from './admin/components/options-adm/options-adm.
 import { CreateEventComponent } from './admin/components/create-event/create-event.component';
 import { ListEventsComponent } from './admin/components/list-events/list-events.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { provideNgxMask } from 'ngx-mask';
 
 
 const material = [
@@ -40,7 +42,7 @@ const material = [
     HttpClientModule,
     material
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }, provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
