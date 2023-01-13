@@ -86,3 +86,7 @@
   border-radius: 1rem;
   font-size: 1.5rem;
 }
+
+.bt-submit-event:disabled {
+  filter: grayscale(1.2);
+}

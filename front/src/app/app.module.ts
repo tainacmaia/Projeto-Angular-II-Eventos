@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,13 +33,14 @@ const material = [
     HomeAdmComponent,
     OptionsAdmComponent,
     CreateEventComponent,
-    ListEventsComponent
+    ListEventsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    material
+    material,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

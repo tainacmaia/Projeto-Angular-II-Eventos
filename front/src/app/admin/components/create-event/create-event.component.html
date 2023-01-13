@@ -1,8 +1,8 @@
 <section class="home-page">
   <img src="../../../assets/images/palco.jpeg" alt="palco com luzes">
   <button mat-button class="bt-back">VOLTAR</button>
-  <mat-form-field>
-    <div class="form-container">
+  <div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
       <div class="form">
         <p>CRIAR EVENTO</p>
 
@@ -10,34 +10,34 @@
           <div class="form-align">
             <div class="element-form">
               <mat-label>NOME DO EVENTO</mat-label>
-              <input matInput>
+              <input matInput formControlName="title" type="text">
             </div>
             <div class="element-form">
               <mat-label>DESCRIÇÃO DO EVENTO</mat-label>
-              <input matInput>
+              <input matInput formControlName="description" type="text">
             </div>
             <div class="element-form">
               <mat-label>PREÇO DO INGRESSO</mat-label>
-              <input matInput>
+              <input matInput formControlName="price" type="number">
             </div>
           </div>
           <div class="form-align">
             <div class="element-form">
               <mat-label>DATA E HORA DO EVENTO</mat-label>
-              <input matInput>
+              <input matInput formControlName="date" type="text">
             </div>
             <div class="element-form">
               <mat-label>LOCAL DO EVENTO</mat-label>
-              <input matInput>
+              <input matInput formControlName="local" type="text">
             </div>
             <div class="element-form">
               <mat-label>ENDEREÇO DO EVENTO</mat-label>
-              <input matInput>
+              <input matInput formControlName="address" type="text">
             </div>
           </div>
         </div>
       </div>
-      <button mat-button class="bt-submit-event">CRIAR EVENTO</button>
-    </div>
-  </mat-form-field>
+      <button type="submit" mat-button class="bt-submit-event" [disabled]="form.invalid">CRIAR EVENTO</button>
+    </form>
+  </div>
 </section>

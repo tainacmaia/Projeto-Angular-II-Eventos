@@ -13,4 +13,8 @@ export class EventsService {
   public getEventsList(): Observable<EventModel[]> {
     return this.http.get<EventModel[]>('http://localhost:5000/events');
   }
+
+  public saveEvent(event: EventModel): Observable<any> {
+    return this.http.post<any>('http://localhost:5000/events', event);
+  }
 }
