@@ -24,7 +24,7 @@ export class ListEventsComponent {
     this.getEventsList();
   }
 
-  private getEventsList ():void {
+  public getEventsList ():void {
     this.events$ = this.eventsService.getEventsList()
     this.events$.subscribe({next: (event: EventModel[]) => {
       this.events = event} })
