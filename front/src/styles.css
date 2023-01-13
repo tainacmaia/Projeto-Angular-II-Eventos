@@ -14,12 +14,15 @@ body{
 
 :root {
   --bg-toolbar: rgba(0, 8, 33, 0.81);
-  --bg-footer: rgba(18, 31, 83, 0.63);
+  --bg-footer: rgb(11,20,55);
   --bg-bt: rgba(15, 31, 100, 1);
   --bg-input-adm: rgba(36, 49, 80, 1);
   --bg-cards--bt-options: rgba(52, 72, 125, 1);
   --bg-html: rgba(0, 1, 7);
+  --bg-bt-edit: rgb(70, 135, 173);
+  --bg-bt-delete: rgb(118, 44, 133);
   --txt-color: rgb(255, 255, 255);
+  --txt-color-dark-blue: rgba(3, 18, 88, 1);
   --txt-color-log-adm: rgba(163, 176, 192, 1);
   --placeholder-color-adm: rgba(79, 109, 144, 1);
 }

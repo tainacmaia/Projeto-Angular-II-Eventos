@@ -13,6 +13,7 @@ import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { OptionsAdmComponent } from './admin/components/options-adm/options-adm.component';
 import { CreateEventComponent } from './admin/components/create-event/create-event.component';
+import { ListEventsComponent } from './admin/components/list-events/list-events.component';
 
 
 const material = [
@@ -29,7 +30,8 @@ const material = [
     ToolbarComponent,
     HomeAdmComponent,
     OptionsAdmComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    ListEventsComponent
   ],
   imports: [
     BrowserModule,
