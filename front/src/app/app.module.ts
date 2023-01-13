@@ -19,11 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { provideNgxMask } from 'ngx-mask';
 
+import {MatInputModule} from '@angular/material/input';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const material = [
   MatToolbarModule,
   MatButtonModule,
   MatFormFieldModule,
+  MatInputModule,
 ];
 
 @NgModule({
@@ -42,7 +46,8 @@ const material = [
     AppRoutingModule,
     HttpClientModule,
     material,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }, provideNgxMask()],
   bootstrap: [AppComponent]
