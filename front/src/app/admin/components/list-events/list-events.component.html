@@ -2,13 +2,13 @@
   <img src="../../../../assets/images/luzes-fundo.jpg" alt="palco com luzes">
   <button mat-button class="bt-back">VOLTAR</button>
   <p>MEUS EVENTOS</p>
-  <div class="container-events">
+  <div class="container-events" *ngFor="let event in events">
     <div class="card-container">
-      <h2>BRUNO MARS</h2>
-      <h4>MÚSICA POP</h4>
+      <h2>{{event.title}}</h2>
+      <h4>{{event.description}}</h4>
       <h3>12/12/2012 - 19h</h3>
-      <h3>CREDCAR HALL</h3>
-      <h2>R$ 263</h2>
+      <h3>{{event.local}}</h3>
+      <h2>R$ {{event.price}}</h2>
       <div class="actions">
         <div class="action-element-edit">
           <a><span>Editar Evento</span></a>

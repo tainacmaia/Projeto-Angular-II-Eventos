@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
+import { EventModel } from '../../models/event.model';
+import { EventsService } from '../../service/adm-events.service';
 
 @Component({
   selector: 'app-list-events',
@@ -7,4 +11,22 @@ import { Component } from '@angular/core';
 })
 export class ListEventsComponent {
 
+  public events$!: Observable<EventModel[]>;
+  public events!: EventModel[];
+
+  constructor(
+    private eventsService: EventsService,
+    private router: Router
+  ) { }
+
+
+  ngOnInit(): void {
+    this.getEventsList();
+  }
+
+  private getEventsList ():void {
+    this.events$ = this.eventsService.getEventsList()
+    this.events$.subscribe({next: (event: EventModel[]) => {
+      this.events = event} })
+  }
 }
