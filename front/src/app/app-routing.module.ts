@@ -1,3 +1,4 @@
+import { ListEventsComponent } from './admin/components/list-events/list-events.component';
 import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule, Component } from '@angular/core';
@@ -14,10 +15,13 @@ const routes: Routes = [
         path: 'options', component: OptionsAdmComponent,
       },
       {
-        path: 'create', component: CreateEventComponent
+        path: 'create', component: CreateEventComponent,
       },
       {
-        path: '', component: HomeAdmComponent
+        path: 'list/events', component:  ListEventsComponent,
+      },
+      {
+        path: '', component: HomeAdmComponent,
       }
     ]
   },

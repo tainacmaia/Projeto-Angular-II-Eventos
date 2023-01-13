@@ -17,6 +17,12 @@
   filter: brightness(0.5);
 }
 
+.bt-back {
+  position: absolute;
+  top: 6rem;
+  left: 4rem;
+}
+
 .form p{
   font-size: 5rem;
   padding: 1rem 2rem 2rem 2rem;
