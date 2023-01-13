@@ -1,11 +1,11 @@
 CREATE TABLE events(
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-    description TEXT NULL,
-    date DATE NOT NULL,
-    local TEXT NOT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NULL,
+    date DATETIME NOT NULL,
+    local VARCHAR(255) NOT NULL,
     price INTEGER NOT NULL,
-    address TEXT NOT NULL
+    address VARCHAR(255) NOT NULL
 )
 
 SELECT * FROM events;
