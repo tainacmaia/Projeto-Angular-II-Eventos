@@ -17,6 +17,7 @@ body{
   --bg-footer: rgba(18, 31, 83, 0.63);
   --bg-bt: rgba(15, 31, 100, 1);
   --bg-input-adm: rgba(36, 49, 80, 1);
+  --bg-cards--bt-options: rgba(52, 72, 125, 1);
   --bg-html: rgba(0, 1, 7);
   --txt-color: rgb(255, 255, 255);
   --txt-color-log-adm: rgba(163, 176, 192, 1);

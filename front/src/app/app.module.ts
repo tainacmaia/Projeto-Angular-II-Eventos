@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { OptionsAdmComponent } from './admin/components/options-adm/options-adm.component';
 
 
 const material = [
@@ -25,7 +26,8 @@ const material = [
     HomeComponent,
     FooterComponent,
     ToolbarComponent,
-    HomeAdmComponent
+    HomeAdmComponent,
+    OptionsAdmComponent
   ],
   imports: [
     BrowserModule,

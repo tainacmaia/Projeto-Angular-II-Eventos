@@ -1,12 +1,22 @@
 import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
 import { HomeComponent } from './components/home/home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OptionsAdmComponent } from './admin/components/options-adm/options-adm.component';
 
 const routes: Routes = [
 
 
-  { path: 'adm', component: HomeAdmComponent },
+  {
+    path: 'adm', children: [
+      {
+        path: 'options', component: OptionsAdmComponent,
+      },
+      {
+        path: '', component: HomeAdmComponent
+      }
+    ]
+  },
   { path: '', component: HomeComponent },
 ];
 

@@ -1,0 +1,34 @@
+.home-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 83vh;
+  flex-direction: column;
+}
+
+.home-page img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+}
+
+.container-options{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bt-options{
+  background: var(--bg-cards--bt-options);
+  padding: 3rem 1rem;
+  margin: 1rem;
+  width: 80vw;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+}
