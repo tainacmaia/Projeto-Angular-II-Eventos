@@ -16,7 +16,7 @@ const doc = {
   produces: ['application/json'],
   tags: [{
     "name": "Endpoints",
-    "description": "User and Product endpoints"
+    "description": "Event endpoints"
   }],
   securityDefinitions: {
     api_key: {

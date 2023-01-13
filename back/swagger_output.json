@@ -42,20 +42,14 @@
   "paths": {
     "/events/": {
       "get": {
-        "tags": [
-          "Event"
-        ],
-        "description": "Endpoint para obter um evento.",
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
-            "description": "Evento encontrado.",
-            "schema": {
-              "$ref": "#/definitions/Event"
-            }
+            "description": "OK"
           },
           "404": {
-            "description": "Evento não encontrado."
+            "description": "Not Found"
           }
         }
       },
@@ -130,27 +124,27 @@
         },
         "title": {
           "type": "string",
-          "example": "Teste"
+          "example": "Evento"
         },
         "description": {
           "type": "string",
-          "example": "Esse é um evento"
+          "example": "Tralala"
         },
         "date": {
           "type": "string",
-          "example": "2023-09-29 18:00:00"
+          "example": "2023-03-12"
         },
         "local": {
           "type": "string",
-          "example": "Estádio do Arco-íris"
+          "example": "Test Stadium"
         },
         "price": {
           "type": "number",
-          "example": "11985476932"
-        },     
-          "address": {
-            "type": "string",
-            "example": "Rua do Arco-íris"
+          "example": 200
+        },
+        "address": {
+          "type": "string",
+          "example": "Rua do Teste"
         }
       }
     }

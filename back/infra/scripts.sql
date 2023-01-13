@@ -2,7 +2,7 @@ CREATE TABLE events(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
     description TEXT NULL,
-    date TEXT NOT NULL,
+    date DATE NOT NULL,
     local TEXT NOT NULL,
     price INTEGER NOT NULL,
     address TEXT NOT NULL

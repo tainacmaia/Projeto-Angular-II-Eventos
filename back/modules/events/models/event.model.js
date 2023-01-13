@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const database = require('../../../infra/db');
 
-const User = database.define('User', {
+const Event = database.define('Event', {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
@@ -14,7 +14,7 @@ const User = database.define('User', {
   },
   description: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: true
   },
   date: {
     type: Sequelize.DATE,
@@ -34,4 +34,4 @@ const User = database.define('User', {
   }
 });
 
-module.exports = User;
+module.exports = Event;
