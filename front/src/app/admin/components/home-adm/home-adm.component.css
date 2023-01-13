@@ -18,6 +18,49 @@
 }
 
 .home-page span{
-  font-size: 5rem;
+  font-size: 7rem;
   padding: 3rem 3rem 0 3rem;
+}
+
+.container-adm{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-mdc-form-field{
+  width: 100%;
+}
+
+.adm-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputAdm {
+  margin: 1rem;
+  width: 60%;
+  padding: 1rem;
+  border-radius: 1.7rem;
+  text-align: center;
+  font-size: 2rem;
+  background-color: var(--bg-input-adm);
+  outline: none;
+}
+
+.inputAdm::-webkit-input-placeholder {
+  color:var(--placeholder-color-adm)
+}
+
+.submitAdm {
+  width: 40%;
+  padding: .6rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: var(--bg-bt);
+  color: var(--txt-color-log-adm);
 }

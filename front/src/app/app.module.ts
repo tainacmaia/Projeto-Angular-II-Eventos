@@ -10,10 +10,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 const material = [
   MatToolbarModule,
   MatButtonModule,
+  MatFormFieldModule,
 ];
 
 @NgModule({
