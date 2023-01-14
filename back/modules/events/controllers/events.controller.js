@@ -17,6 +17,7 @@ class EventsController {
 
   async create(req, res) {
     const event = req.body;
+    console.log(event);
     eventsRepositories.create(event);
     return res.json();
   }
