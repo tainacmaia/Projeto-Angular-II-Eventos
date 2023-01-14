@@ -29,4 +29,13 @@ export class ListEventsComponent {
     this.events$.subscribe({next: (event: EventModel[]) => {
       this.events = event} })
   }
+
+  public editEvent(id: string): void {
+    this.router.navigate(['/adm/edit', id]);
+  }
+
+  public deleteEvent(id: string): void {
+    this.eventsService.deleteEvent(id).subscribe();
+    this.getEventsList();
+  }
 }

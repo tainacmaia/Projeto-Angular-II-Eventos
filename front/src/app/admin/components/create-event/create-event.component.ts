@@ -13,7 +13,7 @@ export class CreateEventComponent {
 
   public form!: FormGroup;
   public event!: EventModel;
-  public eventId!: String;
+  public eventId!: string;
 
   constructor(
     private eventsService: EventsService,
@@ -23,10 +23,10 @@ export class CreateEventComponent {
 
   ngOnInit(): void {
     this.buildForm();
-    // this.eventId = this.route.snapshot.params['id'];
-    // if (this.eventId) {
-    //   this.updateForm();
-    // }
+    this.eventId = this.route.snapshot.params['id'];
+    if (this.eventId) {
+      this.updateForm();
+    }
   }
 
 
@@ -47,13 +47,14 @@ export class CreateEventComponent {
 
   public onSubmit(): void {
     const event = this.form.getRawValue();
+    console.log(event);
 
     if (this.eventId) {
-      // this.eventsService.editProduct(event).subscribe(() => {
-      //   this.form.reset();
-      //   this.router.navigate(['/products']);
-      // }
-      // );
+      this.eventsService.editEvent(event).subscribe(() => {
+        this.form.reset();
+        this.router.navigate(['/adm/list/events']);
+      }
+      );
     } else {
       this.eventsService.saveEvent(event).subscribe(() => {
         this.form.reset();
@@ -61,5 +62,15 @@ export class CreateEventComponent {
       }
       );
     }
+  }
+
+  private updateForm(): void {
+    this.eventsService.getEventById(this.eventId).subscribe(
+      {
+        next: (res) => {
+          const event = res
+          this.form.patchValue(event)
+        }
+      })
   }
 }

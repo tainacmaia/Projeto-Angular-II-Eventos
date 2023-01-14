@@ -14,7 +14,19 @@ export class EventsService {
     return this.http.get<EventModel[]>('http://localhost:5000/events');
   }
 
+  public getEventById(id: string): Observable<EventModel> {
+    return this.http.get<EventModel>(`http://localhost:5000/events/${id}`);
+  }
+
   public saveEvent(event: EventModel): Observable<any> {
     return this.http.post<any>('http://localhost:5000/events', event);
+  }
+
+  public editEvent(event: EventModel): Observable<any>{
+    return this.http.put<any>(`http://localhost:5000/events/${event.id}`, event);
+  }
+
+  public deleteEvent(id: string): Observable<any> {
+    return this.http.delete<any>(`http://localhost:5000/events/${id}`);
   }
 }

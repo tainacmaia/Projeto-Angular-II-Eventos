@@ -11,10 +11,10 @@
       <h2>R$ {{event.price}}</h2>
       <div class="actions">
         <div class="action-element-edit">
-          <a><span>Editar Evento</span></a>
+          <button (click)="editEvent(event.id)">Editar Evento</button>
         </div>
         <div class="action-element-delete">
-          <a><span>Excluir Evento</span></a>
+          <button (click)="deleteEvent(event.id)">Excluir Evento</button>
         </div>
       </div>
     </div>

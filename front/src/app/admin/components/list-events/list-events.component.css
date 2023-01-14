@@ -71,18 +71,19 @@
   margin: 1rem;
 }
 
-.action-element-edit a, .action-element-delete a {
+.action-element-edit button, .action-element-delete button {
   padding: .2rem 1rem;
   border-radius: 1rem;
+  background-color: var(--bg-bt);
 }
 
-.action-element-edit a:hover {
+.action-element-edit button:hover {
   cursor: pointer;
   background: var(--bg-bt-edit);
   transition: .5s all;
 }
 
-.action-element-delete a:hover {
+.action-element-delete button:hover {
   cursor: pointer;
   background: var(--bg-bt-delete);
   transition: .5s all;
