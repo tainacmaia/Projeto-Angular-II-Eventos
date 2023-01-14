@@ -18,30 +18,29 @@ class EventsRepository {
     return event;
   }
 
-  async create(eventP) {
+  async create(event) {
     try {
       await database.sync();
-
-      const {
-        ...event
-      } = eventP;
-
+      const createdEvent = await Event.create(event);
+      return createdEvent;
     } catch (error) {
-      console.log('Error stack:', error);
+      console.log(error);
     }
   }
 
-  async update(id, eventP) {
+  async update(id, event) {
     try {
       await database.sync();
-
-      const {
-        address,
-        contact,
-        ...event
-      } = eventP;
+      const updatedEvent = await Event.update(
+        event, {
+          where: {
+            id
+          }
+        }
+      );
+      return updatedEvent;
     } catch (error) {
-      console.log('Error stack:', error);
+      console.log(error);
     }
   }
 
