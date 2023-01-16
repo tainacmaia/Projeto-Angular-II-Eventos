@@ -22,6 +22,7 @@ import { provideNgxMask } from 'ngx-mask';
 import {MatInputModule} from '@angular/material/input';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventsListComponent } from './user/components/events-list/events-list.component';
 
 const material = [
   MatToolbarModule,
@@ -40,6 +41,7 @@ const material = [
     OptionsAdmComponent,
     CreateEventComponent,
     ListEventsComponent,
+    EventsListComponent,
   ],
   imports: [
     BrowserModule,

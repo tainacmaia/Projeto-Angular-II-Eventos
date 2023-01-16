@@ -2,6 +2,8 @@
   background: var(--bg-toolbar);
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  z-index: 20;
 }
 
 .menu-adm, .navbar{

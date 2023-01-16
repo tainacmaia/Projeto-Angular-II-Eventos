@@ -1,3 +1,4 @@
+import { EventsListComponent } from './user/components/events-list/events-list.component';
 import { ListEventsComponent } from './admin/components/list-events/list-events.component';
 import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
 import { HomeComponent } from './components/home/home.component';
@@ -26,6 +27,25 @@ const routes: Routes = [
       {
         path: '', component: HomeAdmComponent,
       }
+    ]
+  },
+  {
+    path: 'user', children: [
+      // {
+      //   path: 'options', component: OptionsAdmComponent,
+      // },
+      // {
+      //   path: 'reservation', component: CreateEventComponent,
+      // },
+      // {
+      //   path: 'edit/:id', component: CreateEventComponent,
+      // },
+      {
+        path: 'list/events', component:  EventsListComponent,
+      },
+      // {
+      //   path: '', component: HomeAdmComponent,
+      // }
     ]
   },
   { path: '', component: HomeComponent },
