@@ -1,6 +1,6 @@
 <section class="home-page">
-  <img src="../../../assets/images/palco.jpeg" alt="palco com luzes">
-  <button mat-button class="bt-back">VOLTAR</button>
+  <img src="../../../assets/images/luzes-fundo.jpg" alt="palco com luzes">
+  <button mat-button class="bt-back" routerLink="/adm/options">VOLTAR</button>
   <div class="form-container">
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
       <div class="form">
@@ -8,32 +8,32 @@
 
         <div class="column-form">
           <div class="form-align">
-              <mat-form-field class="element-form">
-                <mat-label>NOME DO EVENTO</mat-label>
+              <div class="element-form">
+                <label>NOME DO EVENTO</label>
                 <input matInput formControlName="title" type="text">
-              </mat-form-field>
-            <mat-form-field class="element-form">
-              <mat-label>DESCRIÇÃO DO EVENTO</mat-label>
+              </div>
+            <div class="element-form">
+              <label>DESCRIÇÃO DO EVENTO</label>
               <input matInput formControlName="description" type="text">
-            </mat-form-field>
-            <mat-form-field class="element-form">
-              <mat-label>PREÇO DO INGRESSO</mat-label>
+            </div>
+            <div class="element-form">
+              <label>PREÇO DO INGRESSO</label>
               <input matInput formControlName="price" type="number">
-            </mat-form-field>
+            </div>
           </div>
           <div class="form-align">
-            <mat-form-field class="element-form">
-              <mat-label>DATA E HORA DO EVENTO</mat-label>
+            <div class="element-form">
+              <label>DATA E HORA DO EVENTO</label>
               <input matInput formControlName="date" type="datetime-local" max="9999-12-31T23:59" mask="DD/MM/yyyy HH:mm">
-            </mat-form-field>
-            <mat-form-field class="element-form">
-              <mat-label>LOCAL DO EVENTO</mat-label>
+            </div>
+            <div class="element-form">
+              <label>LOCAL DO EVENTO</label>
               <input matInput formControlName="local" type="text">
-            </mat-form-field>
-            <mat-form-field class="element-form">
-              <mat-label>ENDEREÇO DO EVENTO</mat-label>
+            </div>
+            <div class="element-form">
+              <label>ENDEREÇO DO EVENTO</label>
               <input matInput formControlName="address" type="text">
-            </mat-form-field>
+            </div>
           </div>
         </div>
       </div>
