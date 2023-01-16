@@ -24,7 +24,7 @@
           <div class="form-align">
             <mat-form-field class="element-form">
               <mat-label>DATA E HORA DO EVENTO</mat-label>
-              <input matInput formControlName="date" type="text">
+              <input matInput formControlName="date" type="datetime-local" max="9999-12-31T23:59" mask="DD/MM/yyyy HH:mm">
             </mat-form-field>
             <mat-form-field class="element-form">
               <mat-label>LOCAL DO EVENTO</mat-label>

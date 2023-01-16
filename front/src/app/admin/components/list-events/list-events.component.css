@@ -46,8 +46,11 @@
   justify-content: center;
   align-items: center;
   margin: 1rem;
+  margin: 3rem 2rem;
   border-radius: 1.5rem;
   transform: scale(1.2);
+  min-width: 12vw;
+  min-height: 35vh;
 }
 
 .card-container h2{
