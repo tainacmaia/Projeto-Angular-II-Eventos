@@ -16,6 +16,7 @@
         <h3>{{event.date| date: 'dd/MM/yyyy - HH:mm'}}</h3>
         <h3>{{event.local}}</h3>
         <h2>R$ {{event.price}}</h2>
+        <button (click)="reservation(event.id)" class="bt-reservation">RESERVAR</button>
       </div>
     </div>
 </div>

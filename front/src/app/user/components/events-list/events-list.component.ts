@@ -35,4 +35,8 @@ export class EventsListComponent {
     this.events$.subscribe({next: (event: EventModel[]) => {
       this.events = event} })
   }
+
+  public reservation (id: string): void {
+    
+  }
 }
