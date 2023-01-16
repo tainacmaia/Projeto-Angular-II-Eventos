@@ -1,0 +1,31 @@
+<div class="container-page">
+  <section class="home-page">
+    <img src="../../../../assets/images/show-publico.jpg" alt="palco com luzes">
+  </section>
+
+
+  <input type="text" class="search-events" placeholder="BUSQUE SEU EVENTO">
+  <button type="submit" class="bt-search">BUSCAR</button>
+
+  <div class="container-cards" *ngFor="let event of events">
+    <div class="card">
+      <div class="text-card">
+        <span class="span-card">Nome: {{event.title}}</span>
+        <span class="span-card">Quantidade: 80</span>
+        <div class="actions">
+          <div class="action-element-edit">
+            <button >Editar Evento</button>
+          </div>
+          <div class="action-element-delete">
+            <button >Excluir Evento</button>
+          </div>
+        </div>
+      </div>
+      <div class="name-show">
+        <span class="title-show">BRUNO MARS</span>
+        <span class="date-show">21/12/2020</span>
+      </div>
+    </div>
+  </div>
+
+</div>

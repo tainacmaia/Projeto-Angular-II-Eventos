@@ -1,3 +1,4 @@
+import { MinhasReservasComponent } from './user/components/minhas-reservas/minhas-reservas.component';
 import { EventsListComponent } from './user/components/events-list/events-list.component';
 import { ListEventsComponent } from './admin/components/list-events/list-events.component';
 import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
@@ -34,9 +35,9 @@ const routes: Routes = [
       // {
       //   path: 'options', component: OptionsAdmComponent,
       // },
-      // {
-      //   path: 'reservation', component: CreateEventComponent,
-      // },
+      {
+        path: 'reservas', component: MinhasReservasComponent,
+      },
       // {
       //   path: 'edit/:id', component: CreateEventComponent,
       // },
