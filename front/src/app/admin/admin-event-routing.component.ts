@@ -1,3 +1,4 @@
+import { LoginAdmComponent } from './../login-adm/login-adm.component';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -23,6 +24,7 @@ const routes: Routes = [
         path: 'list/events', component:  ListEventsComponent,
       },
       {
+        // path: '', component: LoginAdmComponent,
         path: '', component: HomeAdmComponent,
       }
     ]
