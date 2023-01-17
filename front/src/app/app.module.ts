@@ -10,30 +10,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { OptionsAdmComponent } from './admin/components/options-adm/options-adm.component';
-import { CreateEventComponent } from './admin/components/create-event/create-event.component';
-import { ListEventsComponent } from './admin/components/list-events/list-events.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { provideNgxMask } from 'ngx-mask';
 
 import {MatInputModule} from '@angular/material/input';
-import {MatDialogModule} from '@angular/material/dialog';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EventsListComponent } from './user/components/events-list/events-list.component';
-import { MinhasReservasComponent } from './user/components/minhas-reservas/minhas-reservas.component';
-import { ReservationComponent } from './user/components/reservation/reservation.component';
-import { ModalExcluirEventoComponent } from './admin/modals/modal-excluir-evento/modal-excluir-evento.component';
+
 
 const material = [
   MatToolbarModule,
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
-  MatDialogModule
 ];
 
 @NgModule({
@@ -42,14 +32,6 @@ const material = [
     HomeComponent,
     FooterComponent,
     ToolbarComponent,
-    HomeAdmComponent,
-    OptionsAdmComponent,
-    CreateEventComponent,
-    ListEventsComponent,
-    EventsListComponent,
-    MinhasReservasComponent,
-    ReservationComponent,
-    ModalExcluirEventoComponent,
   ],
   imports: [
     BrowserModule,
