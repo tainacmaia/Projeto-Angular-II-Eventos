@@ -1,11 +1,10 @@
 export interface Reservation {
   id: string;
-  title: string;
-  description: string;
-  date: string;
-  local: string;
-  price: number;
-  address: string;
-  createdAt: null;
-  updateAt: null;
+  name: string;
+  quantity: number;
+  eventId: string;
+  titleShow: string;
+  descriptionShow: string
+  dateShow: string;
+  localShow: string;
 }

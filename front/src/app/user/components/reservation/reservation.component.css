@@ -107,3 +107,7 @@
   background-color: darkblue;
   transition: 1s all;
 }
+
+.bt-reservation:disabled{
+  filter: grayscale(1.1);
+}

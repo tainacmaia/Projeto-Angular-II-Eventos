@@ -12,10 +12,12 @@
         <h4>R$ {{event.price}}</h4>
       </div>
       <div class="data-reservation">
-        <input type="text" placeholder="Nome do responsável pela reserva">
-        <input type="number" placeholder="Quantidade" (change)="reservationTotal($event)">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+          <input type="text" placeholder="Nome do responsável pela reserva" formControlName="name">
+          <input type="number" placeholder="Quantidade" (change)="reservationTotal($event)" formControlName="quantity">
+        </form>
         <span class="reservationValue">Total R$: <span>{{total}}</span></span>
-        <button class="bt-reservation">RESERVAR</button>
+        <button class="bt-reservation" [disabled]="form.invalid" type="submit">RESERVAR</button>
       </div>
   </div>
 
