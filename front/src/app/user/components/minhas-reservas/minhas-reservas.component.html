@@ -1,0 +1,32 @@
+<div class="container-page">
+  <section class="home-page">
+    <img src="../../../../assets/images/show-publico.jpg" alt="palco com luzes">
+  </section>
+
+
+  <input type="text" class="search-events" placeholder="BUSQUE SUA RESERVA">
+  <button type="submit" class="bt-search">BUSCAR</button>
+
+  <div class="container-cards" *ngFor="let reservation of reservations">
+    <div class="card">
+      <div class="text-card">
+        <span class="span-card">Nome: {{reservation.name}}</span>
+        <span class="span-card">Quantidade: {{reservation.quantity}}</span>
+        <div class="actions">
+          <div class="action-element-edit">
+            <button >Editar Evento</button>
+          </div>
+          <div class="action-element-delete">
+            <button >Excluir Evento</button>
+          </div>
+        </div>
+      </div>
+      <div class="name-show">
+        <span class="title-show">{{reservation.titleShow}}</span>
+        <span class="date-show">{{reservation.dateShow}}</span>
+        <span class="local-show">{{reservation.localShow}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="container-page">
+  <section class="home-page">
+    <img src="../../../../assets/images/show-publico.jpg" alt="palco com luzes">
+    <p>CONHEÇA NOSSOS</p>
+    <p>SHOWS EXCLUSIVOS</p>
+  </section>
+
+  <input type="text" class="search-events" placeholder="BUSQUE SEU EVENTO">
+  <button type="submit" class="bt-search">BUSCAR</button>
+
+  <div class="container-events">
+    <div *ngFor="let event of events">
+      <div class="card-container">
+        <h2>{{event.title}}</h2>
+        <h4>{{event.description}}</h4>
+        <h3>{{event.date| date: 'dd/MM/yyyy - HH:mm'}}</h3>
+        <h3>{{event.local}}</h3>
+        <h2>R$ {{event.price}}</h2>
+        <button (click)="reservation(event.id)" class="bt-reservation">RESERVAR</button>
+      </div>
+    </div>
+  </div>
+</div>

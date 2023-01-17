@@ -1,0 +1,121 @@
+.home-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.container-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(18,16,15);
+}
+
+.home-page img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+}
+
+.search-events{
+  width: 70%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--bg-cards--bt-options);
+  text-align: center;
+  font-size: 1.5rem;
+  outline: none;
+  z-index: 2;
+}
+
+.bt-search {
+  z-index: 20;
+  width: 50%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--bg-bt);
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.container-cards {
+  margin-bottom: 5rem;
+  width: 80%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  background-color: var(--bg-cards--bt-options);
+  z-index: 6;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-card {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+}
+
+.span-card{
+  font-size: 2.2rem;
+}
+
+.name-show {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 40%;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+
+
+
+
+
+
+
+
+.action-element-edit, .action-element-delete{
+  text-align: center;
+  margin: 1rem;
+}
+
+.action-element-edit button, .action-element-delete button {
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--bg-bt);
+}
+
+.action-element-edit button:hover {
+  cursor: pointer;
+  background: var(--bg-bt-edit);
+  transition: .5s all;
+}
+
+.action-element-delete button:hover {
+  cursor: pointer;
+  background: var(--bg-bt-delete);
+  transition: .5s all;
+}

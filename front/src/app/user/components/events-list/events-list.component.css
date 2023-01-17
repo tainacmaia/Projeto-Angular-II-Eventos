@@ -3,7 +3,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 93vh;
   flex-direction: column;
+  z-index: 2;
+}
+
+.container-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(18,16,15);
 }
 
 .home-page img {
@@ -17,19 +27,40 @@
 }
 
 .home-page p{
-  margin-top: 4rem;
   font-size: 5rem;
   padding: 1rem 2rem 2rem 2rem;
+  z-index: 2;
 }
-
+/*
 .bt-back {
   position: absolute;
   top: 6rem;
   left: 4rem;
+} */
+
+.search-events{
+  width: 70%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--bg-cards--bt-options);
+  text-align: center;
+  font-size: 1.5rem;
+  outline: none;
+  z-index: 2;
+}
+
+.bt-search {
+  width: 50%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--bg-bt);
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem;
 }
 
 .container-events{
-  width: 80vw;
+  width: 70vw;
   display: flex;
   margin: 2rem;
   flex-wrap: wrap;
@@ -49,8 +80,8 @@
   margin: 3rem 2rem;
   border-radius: 1.5rem;
   transform: scale(1.2);
-  min-width: 12vw;
-  min-height: 35vh;
+  min-width: 14vw;
+  min-height: 22vh;
 }
 
 .card-container h2{
@@ -68,26 +99,14 @@
 }
 
 
-
-.action-element-edit, .action-element-delete{
-  text-align: center;
-  margin: 1rem;
-}
-
-.action-element-edit button, .action-element-delete button {
-  padding: .2rem 1rem;
-  border-radius: 1rem;
+.bt-reservation {
   background-color: var(--bg-bt);
+  padding: .5rem;
+  border-radius: 1rem;
 }
 
-.action-element-edit button:hover {
-  cursor: pointer;
-  background: var(--bg-bt-edit);
+.bt-reservation:hover {
+  background-color: darkblue;
   transition: .5s all;
-}
-
-.action-element-delete button:hover {
   cursor: pointer;
-  background: var(--bg-bt-delete);
-  transition: .5s all;
 }
