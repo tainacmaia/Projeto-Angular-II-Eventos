@@ -10,48 +10,13 @@ import { CreateEventComponent } from './admin/components/create-event/create-eve
 import { ReservationComponent } from './user/components/reservation/reservation.component';
 
 const routes: Routes = [
-
-
   {
-    path: 'adm', children: [
-      {
-        path: 'options', component: OptionsAdmComponent,
-      },
-      {
-        path: 'create', component: CreateEventComponent,
-      },
-      {
-        path: 'edit/:id', component: CreateEventComponent,
-      },
-      {
-        path: 'list/events', component:  ListEventsComponent,
-      },
-      {
-        path: '', component: HomeAdmComponent,
-      }
-    ]
+    path: 'adm',
+    loadChildren: () => import('./admin/admin-events.module').then(m => m.AdminEventsModule)
   },
   {
-    path: 'user', children: [
-      // {
-      //   path: 'options', component: OptionsAdmComponent,
-      // },
-      {
-        path: 'reservas', component: MinhasReservasComponent,
-      },
-      // {
-      //   path: 'edit/:id', component: CreateEventComponent,
-      // },
-      {
-        path: 'list/events', component:  EventsListComponent,
-      },
-      // {
-      //   path: '', component: HomeAdmComponent,
-      // },
-      {
-        path: 'reservation/:id', component: ReservationComponent,
-      }
-    ]
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
   },
   { path: '', component: HomeComponent },
 ];

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
+import { ModalExcluirEventoComponent } from '../../modals/modal-excluir-evento/modal-excluir-evento.component';
 import { EventModel } from '../../models/event.model';
 import { EventsService } from '../../service/adm-events.service';
 
@@ -16,7 +18,8 @@ export class ListEventsComponent {
 
   constructor(
     private eventsService: EventsService,
-    private router: Router
+    private router: Router,
+    private dialog: MatDialog,
   ) { }
 
 
@@ -32,6 +35,16 @@ export class ListEventsComponent {
 
   public editEvent(id: string): void {
     this.router.navigate(['/adm/edit', id]);
+  }
+
+  openDialog(userId: string) {
+    const dialogRef = this.dialog.open(ModalExcluirEventoComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        this.deleteEvent(userId)
+      }
+    });
   }
 
   public deleteEvent(id: string): void {

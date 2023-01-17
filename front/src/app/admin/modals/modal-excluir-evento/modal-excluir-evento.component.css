@@ -1,0 +1,34 @@
+.modal {
+  background-color: var(--bg-modal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.mat-h3, .mat-subtitle-1, .mat-typography .mat-h3, .mat-typography .mat-subtitle-1, .mat-typography h3 {
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+}
+
+.mat-typography h3{
+  margin: 2rem;
+  font-size: 2.5rem;
+}
+
+
+.bt-yes {
+  background-color: var(--bg-modal);
+  border: 3px solid white;
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+}
+
+.bt-no {
+  background-color: var(--bg-bt);
+  border: 3px solid var(--bg-bt);
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+}
