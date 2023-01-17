@@ -21,11 +21,15 @@ CREATE TABLE reservations(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) NOT NULL,
     quantity INTEGER NOT NULL,
+    createdAt DATETIME,
+    updatedAt DATETIME,
     eventId INTEGER NOT NULL REFERENCES events(id)
 )
 
-DROP TABLE reservas
+DROP TABLE reservations
 
 INSERT INTO reservations(name, quantity, eventId) VALUES ('Testadora', 2, 1)
+
+SELECT*FROM reservations
 
 SELECT*FROM events as e JOIN reservations as r ON e.id = r.eventId WHERE e.title = 'Teste'
