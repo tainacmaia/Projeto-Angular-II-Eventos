@@ -16,7 +16,7 @@ const doc = {
   produces: ['application/json'],
   tags: [{
     "name": "Endpoints",
-    "description": "Event endpoints"
+    "description": "Event and Reservation endpoints"
   }],
   securityDefinitions: {
     api_key: {
@@ -43,6 +43,12 @@ const doc = {
       local: "Test Stadium",
       price: 200,
       address: "Rua do Teste"
+    },
+    Reservation: {
+      id: 1,
+      name: "Fulaninha",
+      quantity: 2,
+      eventId: 1
     }
   }
 }

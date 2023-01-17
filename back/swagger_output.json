@@ -10,7 +10,7 @@
   "tags": [
     {
       "name": "Endpoints",
-      "description": "Event endpoints"
+      "description": "Event and Reservation endpoints"
     }
   ],
   "schemes": [
@@ -145,6 +145,27 @@
         "address": {
           "type": "string",
           "example": "Rua do Teste"
+        }
+      }
+    },
+    "Reservation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "example": 1
+        },
+        "name": {
+          "type": "string",
+          "example": "Fulaninha"
+        },
+        "quantity": {
+          "type": "number",
+          "example": 2
+        },
+        "eventId": {
+          "type": "number",
+          "example": 1
         }
       }
     }
