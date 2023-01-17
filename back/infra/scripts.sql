@@ -26,7 +26,16 @@ CREATE TABLE reservations(
     eventId INTEGER NOT NULL REFERENCES events(id)
 )
 
+CREATE TABLE users(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255),
+    createdAt DATETIME,
+    updatedAt DATETIME
+)
+
 DROP TABLE reservations
+DROP TABLE users
 
 INSERT INTO reservations(name, quantity, eventId) VALUES ('Testadora', 2, 1)
 
