@@ -20,17 +20,20 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { provideNgxMask } from 'ngx-mask';
 
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventsListComponent } from './user/components/events-list/events-list.component';
 import { MinhasReservasComponent } from './user/components/minhas-reservas/minhas-reservas.component';
 import { ReservationComponent } from './user/components/reservation/reservation.component';
+import { ModalExcluirEventoComponent } from './admin/modals/modal-excluir-evento/modal-excluir-evento.component';
 
 const material = [
   MatToolbarModule,
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
+  MatDialogModule
 ];
 
 @NgModule({
@@ -46,6 +49,7 @@ const material = [
     EventsListComponent,
     MinhasReservasComponent,
     ReservationComponent,
+    ModalExcluirEventoComponent,
   ],
   imports: [
     BrowserModule,

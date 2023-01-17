@@ -16,6 +16,7 @@ body{
   --bg-toolbar: rgba(0, 8, 33, 0.81);
   --bg-footer: rgb(11,20,55);
   --bg-bt: rgba(15, 31, 100, 1);
+  --bg-modal: rgb(73, 132, 175);
   --bg-input-adm: rgba(36, 49, 80, 1);
   --bg-cards--bt-options: rgba(52, 72, 125, 1);
   --bg-html: rgba(0, 1, 7);
@@ -25,4 +26,9 @@ body{
   --txt-color-dark-blue: rgba(3, 18, 88, 1);
   --txt-color-log-adm: rgba(163, 176, 192, 1);
   --placeholder-color-adm: rgba(79, 109, 144, 1);
+}
+
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-color: transparent;
 }
