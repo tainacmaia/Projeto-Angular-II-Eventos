@@ -29,15 +29,13 @@
   align-items: center;
 }
 
-.mat-mdc-form-field{
-  width: 100%;
-}
 
 .adm-form{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100vw;
 }
 
 .inputAdm {
@@ -63,4 +61,10 @@
   font-size: 1.5rem;
   background-color: var(--bg-bt);
   color: var(--txt-color-log-adm);
+}
+
+
+
+.submitAdm:disabled {
+  filter: grayscale(1.2);
 }

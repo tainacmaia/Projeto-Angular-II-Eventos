@@ -5,11 +5,12 @@
 
 
     <div class="container-adm">
-      <mat-form-field>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="adm-form">
-          <input placeholder="Digite seu ID de Adm" class="inputAdm">
-          <button mat-button type="submit" class="submitAdm" routerLink="/adm/options">Logar</button>
+          <input placeholder="Digite seu usuário de Adm" class="inputAdm"  formControlName="user" type="text">
+          <input placeholder="Digite sua senha de Adm" class="inputAdm"  formControlName="password" type="password">
+          <button mat-button type="submit" class="submitAdm" [disabled]="form.invalid">Logar</button>
         </div>
-      </mat-form-field>
+      </form>
     </div>
 </section>
