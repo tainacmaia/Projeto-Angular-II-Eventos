@@ -37,6 +37,6 @@ export class EventsListComponent {
   }
 
   public reservation (id: string): void {
-    
+    this.router.navigate([`/user/reservation/${id}`])
   }
 }

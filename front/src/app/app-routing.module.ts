@@ -7,6 +7,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OptionsAdmComponent } from './admin/components/options-adm/options-adm.component';
 import { CreateEventComponent } from './admin/components/create-event/create-event.component';
+import { ReservationComponent } from './user/components/reservation/reservation.component';
 
 const routes: Routes = [
 
@@ -46,7 +47,10 @@ const routes: Routes = [
       },
       // {
       //   path: '', component: HomeAdmComponent,
-      // }
+      // },
+      {
+        path: 'reservation/:id', component: ReservationComponent,
+      }
     ]
   },
   { path: '', component: HomeComponent },

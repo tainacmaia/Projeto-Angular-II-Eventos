@@ -1,0 +1,109 @@
+.home-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.container-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(18,16,15);
+}
+
+.home-page img {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+}
+
+
+
+.container-events{
+  z-index: 5;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60vh;
+  background-color: var(--bg-cards--bt-options);
+  border-radius: 2rem;
+}
+
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  text-align: center;
+}
+
+.card-container h2 {
+  font-weight: 400;
+  font-size: 5rem;
+}
+
+
+.card-container h3 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.card-container h4 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.data-reservation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 65%;
+}
+
+.data-reservation input {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  width: 90%;
+  margin: 1rem;
+  background-color: var(--bg-input-adm);
+  font-size: 2rem;
+  outline: none;
+}
+
+.reservationValue{
+  min-width: 70%;
+  background-color: rgb(77, 178, 192);
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  margin: 1rem 0;
+}
+
+.bt-reservation{
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  background-color: var(--bg-bt);
+}
+
+.bt-reservation:hover{
+  cursor: pointer;
+  background-color: darkblue;
+  transition: 1s all;
+}

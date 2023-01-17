@@ -8,26 +8,26 @@ import { Reservation } from "../models/reservation.model";
   providedIn: 'root'
 })
 
-export class EventsService {
+export class ReservationService {
   constructor(private http: HttpClient) { }
 
-  public getReservationList(): Observable<Reservation[]> {
-    return this.http.get<Reservation[]>('http://localhost:5000/events');
-  }
+  // public getReservationList(): Observable<Reservation[]> {
+  //   return this.http.get<Reservation[]>('http://localhost:5000/events');
+  // }
 
-  public getReservationById(id: string): Observable<Reservation> {
-    return this.http.get<Reservation>(`http://localhost:5000/events/${id}`);
-  }
+  // public getReservationById(id: string): Observable<Reservation> {
+  //   return this.http.get<Reservation>(`http://localhost:5000/events/${id}`);
+  // }
 
-  public saveReservation(event: Reservation): Observable<any> {
-    return this.http.post<any>('http://localhost:5000/events', event);
-  }
+  // public saveReservation(event: Reservation): Observable<any> {
+  //   return this.http.post<any>('http://localhost:5000/events', event);
+  // }
 
-  public editReservation(reservation: Reservation): Observable<any>{
-    return this.http.put<any>(`http://localhost:5000/reservations/${reservation.id}`, reservation);
-  }
+  // public editReservation(reservation: Reservation): Observable<any>{
+  //   return this.http.put<any>(`http://localhost:5000/reservations/${reservation.id}`, reservation);
+  // }
 
-  public deleteReservation(id: string): Observable<any> {
-    return this.http.delete<any>(`http://localhost:5000/events/${id}`);
-  }
+  // public deleteReservation(id: string): Observable<any> {
+  //   return this.http.delete<any>(`http://localhost:5000/events/${id}`);
+  // }
 }

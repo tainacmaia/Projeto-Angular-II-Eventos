@@ -24,6 +24,7 @@ import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventsListComponent } from './user/components/events-list/events-list.component';
 import { MinhasReservasComponent } from './user/components/minhas-reservas/minhas-reservas.component';
+import { ReservationComponent } from './user/components/reservation/reservation.component';
 
 const material = [
   MatToolbarModule,
@@ -44,6 +45,7 @@ const material = [
     ListEventsComponent,
     EventsListComponent,
     MinhasReservasComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,
