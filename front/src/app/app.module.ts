@@ -17,6 +17,7 @@ import { provideNgxMask } from 'ngx-mask';
 
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
 
 
 const material = [
@@ -41,7 +42,7 @@ const material = [
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }, provideNgxMask()],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' ,useClass: TokenInterceptor, multi: true }, provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

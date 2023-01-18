@@ -12,7 +12,7 @@ export class TokenInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    if (request.url.includes('/adm/login') || request.url.includes('/adm/create')) {
+    if (request.url.includes('/login') || request.url.includes('/create')) {
       return next.handle(request);
     }
 
