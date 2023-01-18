@@ -22,7 +22,6 @@ import { ListEventsComponent } from './components/list-events/list-events.compon
 const material = [
   MatToolbarModule,
   MatButtonModule,
-  MatFormFieldModule,
   MatInputModule,
 ];
 

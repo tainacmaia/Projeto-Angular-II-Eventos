@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AdminEventRoutingModule } from '../admin/admin-event-routing.component';
 
 const material = [
   MatToolbarModule,
@@ -15,11 +16,12 @@ const material = [
 ];
 
 @NgModule({
+  declarations: [LoginAdmComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    material
+    material,
+    AdminEventRoutingModule,
   ],
-  declarations: [LoginAdmComponent]
 })
 export class LoginAdmModule { }
