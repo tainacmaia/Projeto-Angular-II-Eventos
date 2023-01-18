@@ -27,7 +27,8 @@ const material = [
 
 
 @NgModule({
-  declarations: [AdminEventsComponent,
+  declarations: [
+    AdminEventsComponent,
     HomeAdmComponent,
     OptionsAdmComponent,
     CreateEventComponent,
@@ -36,12 +37,12 @@ const material = [
 
   ],
   imports: [
-    CommonModule,
     AdminEventRoutingModule,
-    MatDialogModule,
+    CommonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     material,
+    MatDialogModule,
   ]
 
 })

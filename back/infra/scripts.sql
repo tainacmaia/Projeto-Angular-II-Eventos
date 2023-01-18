@@ -38,7 +38,9 @@ DROP TABLE reservations
 DROP TABLE users
 
 INSERT INTO reservations(name, quantity, eventId) VALUES ('Testadora', 2, 1)
+INSERT INTO users(username, password) VALUES ('adm', '12345')
 
 SELECT*FROM reservations
+SELECT*FROM users
 
 SELECT*FROM events as e JOIN reservations as r ON e.id = r.eventId WHERE e.title = 'Teste'

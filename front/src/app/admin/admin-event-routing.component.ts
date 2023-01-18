@@ -24,7 +24,7 @@ const routes: Routes = [
         path: 'list/events', component:  ListEventsComponent,
       },
       {
-        path: '', component: LoginAdmComponent,
+        // path: '', component: LoginAdmComponent,
         // path: '', component: HomeAdmComponent,
       }
     ]

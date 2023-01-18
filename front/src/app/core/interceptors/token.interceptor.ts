@@ -12,11 +12,11 @@ export class TokenInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    if (request.url.includes('/login') || request.url.includes('/users/create')) {
+    if (request.url.includes('/login') /**|| request.url.includes('/users/create')**/) {
       return next.handle(request);
     }
 
-    const token = localStorage.getItem('USER_TOKEN');
+    const token = localStorage.getItem('ADM_TOKEN');
 
     if (!token) {
       this.router.navigate(['/login']);
