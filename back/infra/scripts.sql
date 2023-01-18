@@ -38,7 +38,8 @@ DROP TABLE reservations
 DROP TABLE users
 
 INSERT INTO reservations(name, quantity, eventId) VALUES ('Testadora', 2, 1)
-INSERT INTO users(username, password) VALUES ('adm', '12345')
+-- INSERT INTO users(username, password) VALUES ('adm', '12345')
+INSERT INTO users(username, password) VALUES ('adm', '$2a$15$4Nc.eT1FkTL4EVrZfgxHxu9Q3teJ3hKyHoCGEYpbtD.Fap649Droa')
 
 SELECT*FROM reservations
 SELECT*FROM users
