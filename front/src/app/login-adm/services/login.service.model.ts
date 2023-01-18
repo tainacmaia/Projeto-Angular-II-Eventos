@@ -18,9 +18,9 @@ export class LoginService {
   }
 
   public logout(): void {
-    localStorage.removeItem('USER_TOKEN');
+    localStorage.removeItem('ADM_TOKEN');
     localStorage.removeItem('USER');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/adm/login']);
   }
 
 }
