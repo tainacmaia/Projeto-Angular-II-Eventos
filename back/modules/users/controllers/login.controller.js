@@ -8,7 +8,9 @@ class LoginController {
       username,
       password
     } = req.body;
+    const salt = await bcrypt.genSalt(15)
     const user = await loginRepository.findByUsername(username);
+    const newHashedPassword = await bcrypt.hash(user.password, salt)
 
     if (!user) {
       return res.status(404).json({
@@ -16,7 +18,9 @@ class LoginController {
       });
     }
 
-    if (!await bcrypt.compare(password, user.password)) {
+    if (!await bcrypt.compare(password, newHashedPassword)) {
+      console.log(await bcrypt.compare(password, newHashedPassword))
+      console.log('teste',newHashedPassword, user.password);
       return res.status(401).json({
         message: "Senha incorreta!"
       });
