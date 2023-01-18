@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { provideNgxMask } from 'ngx-mask';
 
@@ -42,7 +42,7 @@ const material = [
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' ,useClass: TokenInterceptor, multi: true }, provideNgxMask()],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },{provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}, provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
