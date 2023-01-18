@@ -5,10 +5,10 @@ import { LoginAdmComponent } from './login-adm/login-adm.component';
 import { HomeAdmComponent } from './admin/components/home-adm/home-adm.component';
 
 const routes: Routes = [
-  {
-    path: 'login',
-    component: HomeAdmComponent,
-  },
+  // {
+  //   path: 'login',
+  //   component: HomeAdmComponent,
+  // },
   {
     path: 'adm',
     loadChildren: () => import('./admin/admin-events.module').then(m => m.AdminEventsModule)

@@ -1,10 +1,10 @@
-import { ReservationService } from './../../service/user-reservation.service';
+import { ReservationService } from '../../../user/service/user-reservation.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 import { EventModel } from 'src/app/admin/models/event.model';
 import { EventsService } from 'src/app/admin/service/adm-events.service';
-import { Reservation } from '../../models/reservation.model';
+import { Reservation } from '../../../user/models/reservation.model';
 
 @Component({
   selector: 'app-minhas-reservas',

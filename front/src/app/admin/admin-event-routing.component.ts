@@ -1,4 +1,4 @@
-import { LoginAdmComponent } from './../login-adm/login-adm.component';
+import { AdminEventsComponent } from './admin-events.component';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,13 +7,13 @@ import { CreateEventComponent } from './components/create-event/create-event.com
 import { HomeAdmComponent } from './components/home-adm/home-adm.component';
 import { ListEventsComponent } from './components/list-events/list-events.component';
 import { OptionsAdmComponent } from './components/options-adm/options-adm.component';
+import { MinhasReservasComponent } from './components/minhas-reservas/minhas-reservas.component';
 
 const routes: Routes = [
   {
-    path: '', children: [
-      {
-        path: 'options', component: OptionsAdmComponent,
-      },
+    path: '',
+    component: AdminEventsComponent,
+    children:[
       {
         path: 'create', component: CreateEventComponent,
       },
@@ -24,8 +24,14 @@ const routes: Routes = [
         path: 'list/events', component:  ListEventsComponent,
       },
       {
-        // path: '', component: LoginAdmComponent,
-        // path: '', component: HomeAdmComponent,
+        path: 'options', component: OptionsAdmComponent,
+      },
+      {
+        path: 'reservas', component: MinhasReservasComponent,
+      },
+      {
+        // path: 'login', component: LoginAdmComponent,
+        path: 'login', component: HomeAdmComponent,
       }
     ]
   },

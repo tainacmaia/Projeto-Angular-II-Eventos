@@ -26,6 +26,13 @@
   filter: brightness(0.5);
 }
 
+.bt-back {
+  position: absolute;
+  top: 6rem;
+  left: 4rem;
+  z-index: 10;
+}
+
 .search-events{
   width: 70%;
   padding: 1rem;
