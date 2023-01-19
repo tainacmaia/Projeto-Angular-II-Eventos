@@ -10,9 +10,8 @@ CREATE TABLE events(
     updatedAt DATETIME
 )
 
-SELECT * FROM events;
 
-DROP TABLE events;
+
 
 INSERT INTO events(title,description,date, local, price, address)
 VALUES ('Teste', 'Testinho', datetime('now'), 'Estádio Unicórnio', 200, 'Rua do Unicórnio, 666')
@@ -36,6 +35,7 @@ CREATE TABLE users(
 
 DROP TABLE reservations
 DROP TABLE users
+DROP TABLE events;
 
 INSERT INTO reservations(name, quantity, eventId) VALUES ('Testadora', 2, 1)
 -- INSERT INTO users(username, password) VALUES ('adm', '12345')
@@ -43,5 +43,6 @@ INSERT INTO users(username, password) VALUES ('adm', '$2a$15$4Nc.eT1FkTL4EVrZfgx
 
 SELECT*FROM reservations
 SELECT*FROM users
+SELECT * FROM events
 
 SELECT*FROM events as e JOIN reservations as r ON e.id = r.eventId WHERE e.title = 'Teste'
