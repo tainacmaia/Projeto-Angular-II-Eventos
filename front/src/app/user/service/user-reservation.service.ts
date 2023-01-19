@@ -15,19 +15,7 @@ export class ReservationService {
     return this.http.get<Reservation[]>('http://localhost:5000/reservations');
   }
 
-  // public getReservationById(id: string): Observable<Reservation> {
-  //   return this.http.get<Reservation>(`http://localhost:5000/reservations/${id}`);
-  // }
-
   public saveReservation(reservation: Reservation): Observable<any> {
     return this.http.post<any>('http://localhost:5000/reservations', reservation);
   }
-
-  // public editReservation(reservation: Reservation): Observable<any>{
-  //   return this.http.put<any>(`http://localhost:5000/reservations/${reservation.id}`, reservation);
-  // }
-
-  // public deleteReservation(id: string): Observable<any> {
-  //   return this.http.delete<any>(`http://localhost:5000/reservations/${id}`);
-  // }
 }

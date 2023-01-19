@@ -31,7 +31,6 @@ const routes: Routes = [
         path: 'reservas', component: MinhasReservasComponent, canActivate: [IsAuthenticatedGuard],
       },
       {
-        // path: 'login', component: LoginAdmComponent,
         path: 'login', component: HomeAdmComponent,
       }
     ]

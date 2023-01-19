@@ -28,7 +28,6 @@ export class MinhasReservasComponent {
   constructor(
     private _eventsService: EventsService,
     private _reservationService: ReservationService,
-    private router: Router
   ) { }
 
   ngOnInit(): void {
