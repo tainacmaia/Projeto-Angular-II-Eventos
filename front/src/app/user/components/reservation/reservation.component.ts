@@ -21,9 +21,13 @@ export class ReservationComponent {
   public valor!: number;
   public event!: EventModel;
   public form!: FormGroup;
-
+  public id!: string
   public events!: EventModel[];
+
+
   public reservation!: Reservation;
+
+
   public reservations$!: Observable<Reservation[]>;
   public reservations!: Reservation[];
 
@@ -31,12 +35,12 @@ export class ReservationComponent {
   ngOnInit() {
     this.getValueTicket()
     this.buildForm();
-    // this.getEventsList();
+    this.getEventsList();
   }
 
   private getValueTicket(): any {
-    let id = this.route.snapshot.params['id'];
-    this.eventsService.getEventById(id).subscribe(event => {
+   this.id = this.route.snapshot.params['id'];
+    this.eventsService.getEventById(this.id).subscribe(event => {
         this.valor = event.price;
         this.event = event;
         console.log(this.event)
@@ -45,21 +49,21 @@ export class ReservationComponent {
   }
 
 
-  // public getEventsList(): void {
-  //   this.reservations$ = this.reservationService.getReservationList()
-  //   this.eventsService.getEventsList().subscribe(event => {
-  //     this.events = event
-  //   })
+  public getEventsList(): void {
+    this.reservations$ = this.reservationService.getReservationList()
+    this.eventsService.getEventsList().subscribe(event => {
+      this.events = event
+    })
 
-  //   this.reservations$.pipe(tap(reservations => {
-  //     return reservations.map(reservation => {
-  //       reservation.titleShow = this.events.find(event => event.id == reservation.eventId)!.title
-  //       reservation.descriptionShow = this.events.find(event => event.id == reservation.eventId)!.description
-  //       reservation.dateShow = this.events.find(event => event.id == reservation.eventId)!.date
-  //       reservation.localShow = this.events.find(event => event.id == reservation.eventId)!.local
-  //     })
-  //   }))
-  // }
+    // this.reservations$.pipe(tap(reservations => {
+    //   return reservations.map(reservation => {
+    //     reservation.titleShow = this.events.find(event => event.id == reservation.eventId)!.title
+    //     reservation.descriptionShow = this.events.find(event => event.id == reservation.eventId)!.description
+    //     reservation.dateShow = this.events.find(event => event.id == reservation.eventId)!.date
+    //     reservation.localShow = this.events.find(event => event.id == reservation.eventId)!.local
+    //   })
+    // }))
+  }
 
 
   public reservationTotal(e: any): number {
@@ -78,17 +82,18 @@ export class ReservationComponent {
   public onSubmit():void {
     const reservationForm = this.form.getRawValue();
 
-    this.reservation.eventId = this.event.id;
-    this.reservation.titleShow = this.event.title;
-    this.reservation.dateShow = this.event.date;
-    this.reservation.localShow = this.event.local;
-    this.reservation.name = reservationForm.name;
-    this.reservation.quantity = reservationForm.quantity;
+    this.reservation = {
+      eventId: this.id,
+      name: reservationForm.name,
+      quantity: reservationForm.quantity
+    }
+
+
 
     console.log(this.reservation);
       this.reservationService.saveReservation(this.reservation).subscribe(() => {
         this.form.reset();
-        this.router.navigate(['/user/list/events']);
+        this.router.navigate(['/user']);
       });
 
   }

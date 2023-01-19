@@ -12,7 +12,7 @@ export class ToolbarComponent {
 
   public admLogado(): void {
     const token = localStorage.getItem('ADM_TOKEN');
-    if (token === undefined) {
+    if (!token) {
       this.router.navigate(['/adm/login']);
     }
     else {

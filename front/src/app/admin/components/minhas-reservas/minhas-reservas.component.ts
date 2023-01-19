@@ -1,3 +1,4 @@
+import { MinhaReserva } from './../../models/minha-reserva.model';
 import { ReservationService } from '../../../user/service/user-reservation.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -15,8 +16,14 @@ export class MinhasReservasComponent {
 
   public events$!: Observable<EventModel[]>;
   public events!: EventModel[];
+
   public reservations$!: Observable<Reservation[]>;
   public reservations!: Reservation[];
+
+  public eventReservation!: EventModel;
+
+  public minhaReserva!: MinhaReserva;
+  public minhasReservas!: MinhaReserva[];
 
 
   constructor(
@@ -28,6 +35,7 @@ export class MinhasReservasComponent {
 
   ngOnInit(): void {
     this.getEventsList();
+    this.getReservations();
   }
 
   public getEventsList(): void {
@@ -36,17 +44,30 @@ export class MinhasReservasComponent {
       this.events = event
     })
 
-    // this.reservations$.pipe(tap(reservations => {
-    //   return reservations.map(reservation => {
-    //     reservation.titleShow = this.events.find(event => event.id == reservation.eventId)!.title
-    //     reservation.dateShow = this.events.find(event => event.id == reservation.eventId)!.date
-    //     reservation.localShow = this.events.find(event => event.id == reservation.eventId)!.local
-    //   })
-    // })).
     this.reservations$.subscribe({
-        next: (reservation: Reservation[]) => {
-          this.reservations = reservation
-        }
-      })
+      next: (reservation: Reservation[]) => {
+        this.reservations = reservation
+      }
+    })
   }
+
+  public getReservations(): void {
+    this.reservations.forEach(reservation => {
+      this._eventsService.getEventsList().subscribe(evento => {
+        this.eventReservation = evento.find(event => event.id === reservation.eventId) as EventModel
+      })
+
+      this.minhaReserva = {
+        nameTicket: reservation.name,
+        quantityTicket: reservation.quantity,
+        title: this.eventReservation.title,
+        date: this.eventReservation.date,
+        local: this.eventReservation.local,
+      }
+    })
+
+    console.log(this.minhaReserva)
+
+    this.minhasReservas.push(this.minhaReserva);
+}
 }

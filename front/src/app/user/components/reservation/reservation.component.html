@@ -5,19 +5,19 @@
 
   <div class="container-events">
       <div class="card-container">
-        <h2>{{event.title}}</h2>
-        <h3>{{event.description}}</h3>
-        <h3>{{event.date| date: 'dd/MM/yyyy - HH:mm'}}</h3>
-        <h3>{{event.local}}</h3>
-        <h4>R$ {{event.price}}</h4>
+        <h2>{{event?.title}}</h2>
+        <h3>{{event?.description}}</h3>
+        <h3>{{event?.date| date: 'dd/MM/yyyy - HH:mm'}}</h3>
+        <h3>{{event?.local}}</h3>
+        <h4>R$ {{event?.price}}</h4>
       </div>
       <div class="data-reservation">
         <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
           <input type="text" placeholder="Nome do responsável pela reserva" formControlName="name">
           <input type="number" placeholder="Quantidade" (change)="reservationTotal($event)" formControlName="quantity">
+          <span class="reservationValue">Total R$: <span>{{total}}</span></span>
+          <button class="bt-reservation" [disabled]="form.invalid" type="submit">RESERVAR</button>
         </form>
-        <span class="reservationValue">Total R$: <span>{{total}}</span></span>
-        <button class="bt-reservation" [disabled]="form.invalid" type="submit">RESERVAR</button>
       </div>
   </div>
 
