@@ -39,3 +39,36 @@
   z-index: 2;
 }
 
+.quem-somos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+
+.quem-somos h2{
+  font-size: 1.8rem;
+  margin: .5rem;
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.options p {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.bt-ver-eventos-home {
+  background-color: var(--bg-bt);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+}
+
+.bt-ver-eventos-home:hover {
+  background-color: rgb(102, 34, 167);
+  transition: 1s all;
+}
