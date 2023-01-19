@@ -1,11 +1,11 @@
 <mat-toolbar class="toolbar">
   <div class="menu-adm">
-    <button mat-button routerLink="/adm"><img src="../assets/images/lock-icon.png" alt="lock" class="lock-icon"></button>
+    <button mat-button (click)="admLogado()"><img src="../assets/images/lock-icon.png" alt="lock" class="lock-icon"></button>
     <button mat-button routerLink="">BRIGHT LIGHTS</button>
   </div>
   <div class="navbar">
     <button mat-button routerLink="/user">EVENTOS</button>
-    <button mat-button>CONTATO</button>
-    <button mat-button>SOBRE NÓS</button>
+    <button mat-button routerLink="/user/contato">CONTATO</button>
+    <button mat-button routerLink="/user/sobre-nos">SOBRE NÓS</button>
   </div>
 </mat-toolbar>

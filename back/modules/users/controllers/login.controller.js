@@ -8,7 +8,9 @@ class LoginController {
       username,
       password
     } = req.body;
+    // const salt = await bcrypt.genSalt(15)
     const user = await loginRepository.findByUsername(username);
+    // const newHashedPassword = await bcrypt.hash(user.password, salt)
 
     if (!user) {
       return res.status(404).json({

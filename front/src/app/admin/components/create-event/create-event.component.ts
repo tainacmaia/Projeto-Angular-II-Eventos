@@ -47,8 +47,7 @@ export class CreateEventComponent {
 
   public onSubmit(): void {
     const event = this.form.getRawValue();
-    console.log(event);
-
+    
     if (this.eventId) {
       this.eventsService.editEvent(event).subscribe(() => {
         this.form.reset();

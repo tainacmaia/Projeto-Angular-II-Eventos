@@ -1,0 +1,22 @@
+<div class="container-page">
+  <section class="home-page">
+    <img src="../../../../assets/images/show-publico.jpg" alt="palco com luzes">
+  </section>
+
+  <button mat-button class="bt-back" routerLink="/adm/options">VOLTAR</button>
+
+  <div class="container-cards" *ngFor="let reservation of minhasReservas">
+    <div class="card">
+      <div class="text-card">
+        <span class="span-card">Nome: {{reservation.nameTicket}}</span>
+        <span class="span-card">Quantidade: {{reservation.quantityTicket}}</span>
+      </div>
+      <div class="name-show">
+        <span class="title-show">{{reservation.title}}</span>
+        <span class="date-show">{{reservation.date | date: 'dd/MM/yyyy - HH:mm'}}</span>
+        <span class="local-show">{{reservation.local}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>
