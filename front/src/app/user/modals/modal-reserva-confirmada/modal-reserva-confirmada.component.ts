@@ -9,7 +9,15 @@ export class ModalReservaConfirmadaComponent {
 
   public uid: string = "";
 
-  OnInit(): void {
-    this.uid = Math.floor(Math.random() * 20).toString().replace(".","")
+  ngOnInit(): void {
+    // this.uid = Math.random().toString().replace(".","")
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    for (let i = 0; i < 20; i++) {
+      if (i % 4 == 1 && i > 4) {
+        this.uid += "-"
+      }
+      this.uid += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
   }
 }

@@ -46,7 +46,6 @@ export class ReservationComponent {
     this.eventsService.getEventById(this.id).subscribe(event => {
         this.valor = event.price;
         this.event = event;
-        console.log(this.event)
     })
     return this.valor
   }
@@ -94,8 +93,7 @@ export class ReservationComponent {
       quantity: reservationForm.quantity
     }
 
-    console.log(this.reservation);
-      this.reservationService.saveReservation(this.reservation).subscribe(() => {
+    this.reservationService.saveReservation(this.reservation).subscribe(() => {
         this.form.reset();
 
 
