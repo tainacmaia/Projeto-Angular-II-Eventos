@@ -13,18 +13,18 @@
       <div class="text-card">
         <span class="span-card">Nome: {{reservation.nameTicket}}</span>
         <span class="span-card">Quantidade: {{reservation.quantityTicket}}</span>
-        <div class="actions">
+        <!-- <div class="actions">
           <div class="action-element-edit">
             <button>Editar Evento</button>
           </div>
           <div class="action-element-delete">
             <button>Excluir Evento</button>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="name-show">
         <span class="title-show">{{reservation.title}}</span>
-        <span class="date-show">{{reservation.date}}</span>
+        <span class="date-show">{{reservation.date | date: 'dd/MM/yyyy - HH:mm'}}</span>
         <span class="local-show">{{reservation.local}}</span>
       </div>
     </div>

@@ -81,6 +81,7 @@
   flex-direction: column;
   width: 40%;
   text-align: center;
+  justify-content: center;
 }
 
 .span-card{
@@ -93,7 +94,7 @@
   text-align: center;
   width: 40%;
   justify-content: center;
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 

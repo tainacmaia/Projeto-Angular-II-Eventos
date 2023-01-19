@@ -23,8 +23,7 @@ export class MinhasReservasComponent {
   public eventReservation!: EventModel;
 
   public minhaReserva!: MinhaReserva;
-  public minhasReservas!: MinhaReserva[];
-
+  public minhasReservas: MinhaReserva[] = [];
 
   constructor(
     private _eventsService: EventsService,
@@ -32,16 +31,32 @@ export class MinhasReservasComponent {
     private router: Router
   ) { }
 
-
   ngOnInit(): void {
     this.getEventsList();
-    this.getReservations();
   }
 
   public getEventsList(): void {
     this.reservations$ = this._reservationService.getReservationList()
     this._eventsService.getEventsList().subscribe(event => {
       this.events = event
+    })
+
+    this.reservations$.subscribe(res => {
+      for (let reservation of res) {
+        this._eventsService.getEventsList().subscribe(evento => {
+          this.eventReservation = evento.find(event => event.id === reservation.eventId) as EventModel
+
+          this.minhaReserva = {
+            nameTicket: reservation.name,
+            quantityTicket: reservation.quantity,
+            title: this.eventReservation.title,
+            date: this.eventReservation.date,
+            local: this.eventReservation.local,
+          }
+          console.log(this.minhaReserva)
+          this.minhasReservas.push(this.minhaReserva);
+        })
+      }
     })
 
     this.reservations$.subscribe({
@@ -51,23 +66,4 @@ export class MinhasReservasComponent {
     })
   }
 
-  public getReservations(): void {
-    this.reservations.forEach(reservation => {
-      this._eventsService.getEventsList().subscribe(evento => {
-        this.eventReservation = evento.find(event => event.id === reservation.eventId) as EventModel
-      })
-
-      this.minhaReserva = {
-        nameTicket: reservation.name,
-        quantityTicket: reservation.quantity,
-        title: this.eventReservation.title,
-        date: this.eventReservation.date,
-        local: this.eventReservation.local,
-      }
-    })
-
-    console.log(this.minhaReserva)
-
-    this.minhasReservas.push(this.minhaReserva);
-}
 }

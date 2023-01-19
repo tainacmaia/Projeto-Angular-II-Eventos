@@ -4,7 +4,7 @@ const verifyToken = require("../../../middlewares/verify-token");
 
 const reservationsRouter = Router();
 
-reservationsRouter.get('/', verifyToken, reservationsController.findAll);
+reservationsRouter.get('/', reservationsController.findAll);
 reservationsRouter.get('/:id', verifyToken, reservationsController.findById);
 reservationsRouter.post('/', reservationsController.create);
 reservationsRouter.put('/:id', verifyToken, reservationsController.update);
