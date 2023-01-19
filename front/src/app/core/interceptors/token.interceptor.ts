@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { LocalStorageKeysEnum } from '../constants/local-storage-keys.enum';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
@@ -16,7 +17,7 @@ export class TokenInterceptor implements HttpInterceptor {
       return next.handle(request);
     }
 
-    const token = localStorage.getItem('ADM_TOKEN');
+    const token = localStorage.getItem(LocalStorageKeysEnum.ADM_TOKEN);
 
     if (!token) {
       this.router.navigate(['/adm/login']);

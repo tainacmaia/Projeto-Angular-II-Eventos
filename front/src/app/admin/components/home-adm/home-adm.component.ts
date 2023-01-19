@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LocalStorageKeysEnum } from 'src/app/core/constants/local-storage-keys.enum';
 import { LoginService } from 'src/app/login-adm/services/login.service.model';
 
 @Component({
@@ -31,8 +32,8 @@ export class HomeAdmComponent {
       .subscribe({
         next: (res) => {
           console.log("TESTE"+res);
-          localStorage.setItem('ADM_TOKEN', res.token);
-          localStorage.setItem('USER', JSON.stringify(res.user));
+          localStorage.setItem(LocalStorageKeysEnum.ADM_TOKEN, res.token);
+          localStorage.setItem(LocalStorageKeysEnum.USER, JSON.stringify(res.user));
           this.router.navigate(['/adm/options'])
         },
         error: (err) => {
