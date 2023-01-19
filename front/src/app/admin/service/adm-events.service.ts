@@ -27,9 +27,6 @@ export class EventsService {
   }
 
   public deleteEvent(id: string): Observable<any> {
-    this.getEventById(id).subscribe(data => {
-      console.log(data);
-    })
     return this.http.delete<any>(`http://localhost:5000/events/${id}`);
   }
 }

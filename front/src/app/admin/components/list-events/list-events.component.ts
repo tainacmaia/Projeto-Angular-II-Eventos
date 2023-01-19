@@ -50,7 +50,6 @@ export class ListEventsComponent {
 
   public deleteEvent(id: string): void {
     this.eventsService.deleteEvent(id).subscribe((() => {
-      console.log(id)
       this.getEventsLista();
       document.location.reload();
     }));
