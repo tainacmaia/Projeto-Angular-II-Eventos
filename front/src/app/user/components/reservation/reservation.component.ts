@@ -1,3 +1,5 @@
+import { ModalReservaConfirmadaComponent } from './../../modals/modal-reserva-confirmada/modal-reserva-confirmada.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Reservation } from './../../models/reservation.model';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NumberValueAccessor, Validators } from '@angular/forms';
@@ -6,6 +8,7 @@ import { EventModel } from 'src/app/admin/models/event.model';
 import { EventsService } from 'src/app/admin/service/adm-events.service';
 import { ReservationService } from '../../service/user-reservation.service';
 import { Observable, tap } from 'rxjs';
+import { ModalConfirmarReservaComponent } from '../../modals/modal-confirmar-reserva/modal-confirmar-reserva.component';
 
 @Component({
   selector: 'app-reservation',
@@ -15,7 +18,7 @@ import { Observable, tap } from 'rxjs';
 
 export class ReservationComponent {
 
-  constructor(private eventsService: EventsService, private route: ActivatedRoute, private reservationService: ReservationService, private router: Router) {}
+  constructor(private eventsService: EventsService, private route: ActivatedRoute, private reservationService: ReservationService, private router: Router, private dialog: MatDialog) {}
 
   public total!: number;
   public valor!: number;
@@ -54,15 +57,6 @@ export class ReservationComponent {
     this.eventsService.getEventsList().subscribe(event => {
       this.events = event
     })
-
-    // this.reservations$.pipe(tap(reservations => {
-    //   return reservations.map(reservation => {
-    //     reservation.titleShow = this.events.find(event => event.id == reservation.eventId)!.title
-    //     reservation.descriptionShow = this.events.find(event => event.id == reservation.eventId)!.description
-    //     reservation.dateShow = this.events.find(event => event.id == reservation.eventId)!.date
-    //     reservation.localShow = this.events.find(event => event.id == reservation.eventId)!.local
-    //   })
-    // }))
   }
 
 
@@ -79,6 +73,18 @@ export class ReservationComponent {
     });
   }
 
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalConfirmarReservaComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        this.onSubmit();
+        this.router.navigate(['/user']);
+      }
+    });
+  }
+
+
   public onSubmit():void {
     const reservationForm = this.form.getRawValue();
 
@@ -88,12 +94,15 @@ export class ReservationComponent {
       quantity: reservationForm.quantity
     }
 
-
-
     console.log(this.reservation);
       this.reservationService.saveReservation(this.reservation).subscribe(() => {
         this.form.reset();
-        this.router.navigate(['/user']);
+
+
+        const dialogRefConfirmReservation = this.dialog.open(ModalReservaConfirmadaComponent);
+        dialogRefConfirmReservation.afterClosed().subscribe(() => {
+            this.router.navigate(['/user']);
+        });
       });
 
   }

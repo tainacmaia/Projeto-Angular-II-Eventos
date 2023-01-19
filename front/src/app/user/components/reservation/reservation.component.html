@@ -12,7 +12,7 @@
         <h4>R$ {{event?.price}}</h4>
       </div>
       <div class="data-reservation">
-        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+        <form [formGroup]="form" (ngSubmit)="openDialog()" class="form">
           <input type="text" placeholder="Nome do responsável pela reserva" formControlName="name">
           <input type="number" placeholder="Quantidade" (change)="reservationTotal($event)" formControlName="quantity">
           <span class="reservationValue">Total R$: <span>{{total}}</span></span>

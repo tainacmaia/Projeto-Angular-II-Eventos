@@ -15,6 +15,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ContatoComponent } from './components/contato/contato.component';
 import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
+import { ModalConfirmarReservaComponent } from './modals/modal-confirmar-reserva/modal-confirmar-reserva.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalReservaConfirmadaComponent } from './modals/modal-reserva-confirmada/modal-reserva-confirmada.component';
 
 const material = [
   MatToolbarModule,
@@ -31,6 +34,8 @@ const material = [
     ReservationComponent,
     ContatoComponent,
     SobreNosComponent,
+    ModalConfirmarReservaComponent,
+    ModalReservaConfirmadaComponent,
     ],
 
   imports: [
@@ -39,6 +44,7 @@ const material = [
     MatFormFieldModule,
     UserRoutingModule,
     material,
+    MatDialogModule
   ]
 
 
