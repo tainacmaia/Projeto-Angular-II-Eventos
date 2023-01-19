@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { debounceTime } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { ModalExcluirEventoComponent } from '../../modals/modal-excluir-evento/modal-excluir-evento.component';
 import { EventModel } from '../../models/event.model';
@@ -24,10 +25,10 @@ export class ListEventsComponent {
 
 
   ngOnInit(): void {
-    this.getEventsList();
+    this.getEventsLista();
   }
 
-  public getEventsList ():void {
+  public getEventsLista ():void {
     this.events$ = this.eventsService.getEventsList()
     this.events$.subscribe({next: (event: EventModel[]) => {
       this.events = event} })
@@ -48,7 +49,10 @@ export class ListEventsComponent {
   }
 
   public deleteEvent(id: string): void {
-    this.eventsService.deleteEvent(id).subscribe();
-    this.getEventsList();
+    this.eventsService.deleteEvent(id).subscribe((() => {
+      console.log(id)
+      this.getEventsLista();
+      document.location.reload();
+    }));
   }
 }
