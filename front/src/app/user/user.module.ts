@@ -13,6 +13,8 @@ import { UserRoutingModule } from './user-routing.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ContatoComponent } from './components/contato/contato.component';
+import { SobreNosComponent } from './components/sobre-nos/sobre-nos.component';
 
 const material = [
   MatToolbarModule,
@@ -27,6 +29,8 @@ const material = [
     EventsListComponent,
     MinhasReservasComponent,
     ReservationComponent,
+    ContatoComponent,
+    SobreNosComponent,
     ],
 
   imports: [
