@@ -8,6 +8,7 @@ import { HomeAdmComponent } from './components/home-adm/home-adm.component';
 import { ListEventsComponent } from './components/list-events/list-events.component';
 import { OptionsAdmComponent } from './components/options-adm/options-adm.component';
 import { MinhasReservasComponent } from './components/minhas-reservas/minhas-reservas.component';
+import { IsAuthenticatedGuard } from '../core/guards/is-authenticated.guard';
 
 const routes: Routes = [
   {
@@ -15,19 +16,19 @@ const routes: Routes = [
     component: AdminEventsComponent,
     children:[
       {
-        path: 'create', component: CreateEventComponent,
+        path: 'create', component: CreateEventComponent, canActivate: [IsAuthenticatedGuard],
       },
       {
-        path: 'edit/:id', component: CreateEventComponent,
+        path: 'edit/:id', component: CreateEventComponent, canActivate: [IsAuthenticatedGuard],
       },
       {
-        path: 'list/events', component:  ListEventsComponent,
+        path: 'list/events', component:  ListEventsComponent, canActivate: [IsAuthenticatedGuard],
       },
       {
-        path: 'options', component: OptionsAdmComponent,
+        path: 'options', component: OptionsAdmComponent, canActivate: [IsAuthenticatedGuard],
       },
       {
-        path: 'reservas', component: MinhasReservasComponent,
+        path: 'reservas', component: MinhasReservasComponent, canActivate: [IsAuthenticatedGuard],
       },
       {
         // path: 'login', component: LoginAdmComponent,
