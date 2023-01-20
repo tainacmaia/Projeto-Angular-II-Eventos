@@ -44,7 +44,6 @@ INSERT INTO reservations(name, quantity, eventId) VALUES ('Mateus Augusto', 2, 5
 INSERT INTO reservations(name, quantity, eventId) VALUES ('Lucas Henriques', 3, 2);
 
 
-
 -- INSERT INTO users(username, password) VALUES ('adm', '12345')
 
 SELECT * FROM reservations;
