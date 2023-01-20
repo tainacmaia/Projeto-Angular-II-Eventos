@@ -4,14 +4,13 @@ O repositório Projeto Final - Front Dinâmico - Angular II, tem como finalidade
 O projeto tem como objetivo a criação de uma aplicação web contendo um CRUD com os conceitos vistos em aula.
 
 <p align="center">
-  <img src="imagens/capaProjeto.png"/>
+  <img src="./brightLights-home.png"/>
 </p>
 
 ## Como executar
 - Clone este repositório em uma pasta local.
-- Abra a pasra do projeto com o Visual Studio Code
-- Execute o arquivo "index.html" através de seu navegador de preferência
+- Abra a pasrt do projeto com o Visual Studio Code ou outro editor de texto
+- entre na pasta do backend (back) e rode os comandos: npm i, npm start
+- em seguida rode os mesmos comandos na pasta do frontend
+- caso o banco de dados esteja vazio procure o arquivo "scripts.sql" que fica na pasta "infra" dentro da pasta "back" e execute as linhas 1 a 44;
 
-## Link da página estática
-- O projeto se encontra no link abaixo</br>
->https://mateusasf.github.io/ProjetoFinal_FrontEstatico/
