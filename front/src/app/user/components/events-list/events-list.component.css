@@ -60,7 +60,7 @@
 }
 
 .container-events{
-  width: 70vw;
+  width: 90vw;
   display: flex;
   margin: 2rem;
   flex-wrap: wrap;
@@ -77,10 +77,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem 2rem;
+  margin: 3rem;
   border-radius: 1.5rem;
   transform: scale(1.2);
-  min-width: 14vw;
+  min-width: 18vw;
   min-height: 22vh;
 }
 
