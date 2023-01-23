@@ -13,4 +13,5 @@ O projeto tem como objetivo a criação de uma aplicação web contendo um CRUD 
 - entre na pasta do backend (back) e rode os comandos: npm i, npm start
 - em seguida rode os mesmos comandos na pasta do frontend
 - caso o banco de dados esteja vazio procure o arquivo "scripts.sql" que fica na pasta "infra" dentro da pasta "back" e execute as linhas 1 a 44;
+- a área de admin pode ser acessada com o login "adm" e senha "12345"
 
